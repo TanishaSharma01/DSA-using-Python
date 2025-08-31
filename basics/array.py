@@ -12,3 +12,6 @@ print(arr)
 # Returning the element at 1 index O(1)
 print(arr[1])
 
+# Searching for an element O(N)
+print(1 in arr)
+

@@ -14,6 +14,9 @@ print(two_sum([2, 7, 11, 15], 9))
 
 # Leetcode Style with class
 
+# Typing module allows developers to specify the expected data types of variables, function parameters,
+# and return values
+
 from typing import List
 
 class Solution:
