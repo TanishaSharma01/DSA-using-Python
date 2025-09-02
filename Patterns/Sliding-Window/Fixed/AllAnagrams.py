@@ -1,4 +1,4 @@
-# Leetcode 438
+# Leetcode 438 Medium
 # Optimized approach got time complexity of O(n)
 from typing import List
 

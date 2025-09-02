@@ -1,4 +1,4 @@
-# Leetcode 2461
+# Leetcode 2461 Medium
 
 from typing import List
 

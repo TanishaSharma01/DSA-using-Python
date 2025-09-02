@@ -1,4 +1,4 @@
-# Leetcode 567
+# Leetcode 567 Medium
 # Similar to Leetcode 438
 
 class Solution:
