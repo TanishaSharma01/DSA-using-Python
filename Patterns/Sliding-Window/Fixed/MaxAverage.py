@@ -11,17 +11,17 @@ class Solution:
         # calculating sum of first k elements
         sum = 0
         for i in range(0, k):
-            sum = sum + nums[i]
+            sum += nums[i]
 
         # slide the window across the array
         maxSum = sum
         for j in range(k, n):
-            sum = sum - nums[j - k]  # remove element leaving window
-            sum = sum + nums[j]  # add new element entering window
+            sum -= nums[j - k]  # remove element leaving window
+            sum += nums[j]  # add new element entering window
             maxSum = max(maxSum, sum)  # update max sum
 
         return maxSum / k
 
 sol = Solution()
-print(sol.findMaxAverage([2,6,7,-8,10], 2))
+print(sol.findMaxAverage([2,6,7,8,10], 2))
 
