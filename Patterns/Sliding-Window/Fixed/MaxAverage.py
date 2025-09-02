@@ -3,7 +3,10 @@ from typing import List
 
 class Solution:
     def findMaxAverage(self, nums: List[int], k: int) -> float:
-        # Brute force method uses a nested for loop to find the max sum, them divide by k to get the maximum average which has time complexity of O(n^2).
+        # Brute force method uses a nested for loop to find the max sum, them divide by
+        # k to get the maximum average which has time complexity of O(n^2).
+
+        # Optimized approach O(n)
 
         # length of array
         n = len(nums)
