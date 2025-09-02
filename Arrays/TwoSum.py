@@ -1,4 +1,4 @@
-# Leetcode 1
+# Leetcode 1 Easy
 # Two sum done using arrays
 # Time Complexity: O(N^2)
 # Space Complexity: O(1)

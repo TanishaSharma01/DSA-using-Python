@@ -1,4 +1,4 @@
-# Leetcode 242
+# Leetcode 242 Easy
 from operator import truediv
 
 
@@ -6,7 +6,7 @@ from operator import truediv
 # Time complexity O(n^2)
 class Solution:
     def isAnagram(self, s: str, t: str) -> bool:
-        if len(s) == len(t):
+        if len(s) != len(t):
             return False
         for l in set(s):
             if s.count(l) != t.count(l):
