@@ -12,3 +12,6 @@ print(s)
 
 # checking if an element is present in a set O(1)
 print(2 in s)
+
+s.remove(3)
+print(s)
