@@ -1,6 +1,9 @@
 # Leetcode 200 Medium
+from collections import deque
 from typing import List
 
+# Using DFS
+# risk of hitting recursion limit if grid is huge
 class Solution:
     def numIslands(self, grid: List[List[str]]) -> int:
         # basically the idea is we perform a dfs whenever land(1) is found and convert it to water
@@ -44,3 +47,33 @@ class Solution:
 
         return num_islands
 
+# Using BFS
+# avoids recursion, safer for very large grids.
+class Solution:
+    def numIslands(self, grid: List[List[str]]) -> int:
+
+        if not grid:
+            return 0
+
+        rows, cols = len(grid), len(grid[0])
+        num_islands = 0
+
+        def bfs(r, c):
+            queue = deque()
+            queue.append((r, c))
+            grid[r][c] = "0"  # mark as visited
+
+            while queue:
+                i, j = queue.popleft()
+                for x, y in [(i+1, j), (i-1, j), (i, j+1), (i, j-1)]:
+                    if 0 <= x < rows and 0 <= y < cols and grid[x][y] == "1":
+                        grid[x][y] = "0"
+                        queue.append((x, y))
+
+        for r in range(rows):
+            for c in range(cols):
+                if grid[r][c] == "1":
+                    num_islands += 1
+                    bfs(r, c)
+
+        return num_islands
