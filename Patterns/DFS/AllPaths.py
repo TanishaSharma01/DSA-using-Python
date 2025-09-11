@@ -12,7 +12,7 @@ class Solution:
                 #temp[:] to append a copy of the current path,
                 #so backtracking doesn’t mutate the already stored paths
                 result.append(temp[:])
-            # ekse perform dfs
+            # else perform dfs
             else:
                 for v in graph[u]:
                     dfs(graph, v, target, result, temp)
